@@ -22,7 +22,7 @@ def extract_turkiye_data(input_jsonl, output_jsonl):
                 if "country in eurasia" in description or "country in middle east" in description:
                     if "turkey" in aliases or "türkiye" in aliases:
                         main_turkey_id = entity_id
-                        print(f"*** TTürkiye's Main Entity ID: {main_turkey_id} ***")
+                        print(f"*** Türkiye's Main Entity ID: {main_turkey_id} ***")
 
                 # 2. Anahtar kelimeleri içeren herhangi bir entity'yi filtreleme
                 is_match = False
