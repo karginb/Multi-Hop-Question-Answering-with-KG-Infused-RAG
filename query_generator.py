@@ -61,7 +61,7 @@ def generate_question_with_qwen(path_data):
     Only output the question text. Do not add any conversational filler, explanations, or quotes.
     """
     
-    response = ollama.chat(model='qwen2.5-coder', messages=[
+    response = ollama.chat(model='qwen2.5', messages=[
         {'role': 'user', 'content': prompt}
     ])
     
