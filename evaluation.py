@@ -2,152 +2,139 @@ import json
 import unicodedata
 import collections
 
-# module1_spreading.py dosyamızdaki ana RAG fonksiyonlarını içeri aktarıyoruz
-from spreading_module import spreading_activation, expand_query_with_kg, generate_final_answer
+from no_retrieval import run_no_retrieval
+from vanilla_rag import run_vanilla_rag
+from vanilla_qe import run_vanilla_qe
+from kg_infused_rag import spreading_activation, expand_query_with_kg, generate_final_answer
 
 def normalize_turkish_text(text):
-    """Türkçe karakterleri İngilizce karşılıklarına çevirir ve noktalama/boşlukları siler."""
     text = text.lower().strip()
     replacements = {'ç': 'c', 'ğ': 'g', 'ı': 'i', 'ö': 'o', 'ş': 's', 'ü': 'u'}
-    for turk, eng in replacements.items():
-        text = text.replace(turk, eng)
+    for turk, eng in replacements.items(): text = text.replace(turk, eng)
     text = ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
     return text
 
 def compute_f1(a_gold, a_pred):
-    """Standart QA F1-Score hesaplaması (Kelime bazlı)"""
     gold_toks = a_gold.split()
     pred_toks = a_pred.split()
     common = collections.Counter(gold_toks) & collections.Counter(pred_toks)
     num_same = sum(common.values())
-    
-    if len(gold_toks) == 0 or len(pred_toks) == 0:
-        return int(gold_toks == pred_toks)
-    if num_same == 0:
-        return 0.0
-    
+    if len(gold_toks) == 0 or len(pred_toks) == 0: return int(gold_toks == pred_toks)
+    if num_same == 0: return 0.0
     precision = 1.0 * num_same / len(pred_toks)
     recall = 1.0 * num_same / len(gold_toks)
-    f1 = (2 * precision * recall) / (precision + recall)
-    return f1
+    return (2 * precision * recall) / (precision + recall)
 
-def run_evaluation(dataset_path="turkey_qa_dataset.json"):
-    print("\n" + "="*50)
-    print("STARTING AUTOMATED EVALUATION (ACADEMIC METRICS)")
-    print("="*50)
+def evaluate_single_method(gold, pred, context=None):
+    norm_gold = normalize_turkish_text(gold)
+    norm_pred = normalize_turkish_text(pred)
+    norm_context = normalize_turkish_text(context) if context else ""
     
-    try:
-        with open(dataset_path, 'r', encoding='utf-8') as f:
-            dataset = json.load(f)
-    except FileNotFoundError:
-        print(f"Error: Could not find {dataset_path}")
-        return
+    is_acc = norm_gold in norm_pred or norm_pred in norm_gold
+    is_em = (norm_gold == norm_pred)
+    f1 = compute_f1(norm_gold, norm_pred)
+    
+    is_recall = False
+    if context and norm_gold in norm_context:
+        is_recall = True
+        
+    return {"acc": is_acc, "em": is_em, "f1": f1, "recall": is_recall}
+
+def run_master_evaluation(dataset_path="turkey_qa_dataset.json"):
+    print("\n" + "="*80)
+    print("STARTING DOMAIN-SPECIFIC MASTER EVALUATION (4 METHODS)")
+    print("="*80)
+    
+    with open(dataset_path, 'r', encoding='utf-8') as f:
+        dataset = json.load(f)
 
     total_questions = len(dataset)
+    methods = ["NoR", "Vanilla_RAG", "Vanilla_QE", "KG_RAG"]
     
-    # Metrik Sayaçları
-    acc_count = 0
-    em_count = 0
-    f1_sum = 0.0
-    retrieval_success_count = 0
-    
+    # Nested Dictionary for Domain Breakdown
+    # Yapı: domain_metrics[domain_name][method_name][metric]
+    domain_metrics = {}
+    domain_counts = {}
+
     results_log = []
 
     for idx, item in enumerate(dataset, 1):
         q_id = item['question_id']
         question = item['question_text']
-        gold_answer = item['gold_answer'].lower().strip()
+        gold_answer = item['gold_answer']
+        domain = item['domain']
         seed_entity = item['reasoning_path'][0] 
         
-        print(f"\nEvaluating [{idx}/{total_questions}] - ID: {q_id}")
+        # Domain initialization
+        if domain not in domain_metrics:
+            domain_metrics[domain] = {m: {"acc": 0, "em": 0, "f1": 0.0, "recall": 0} for m in methods}
+            domain_counts[domain] = 0
+            
+        domain_counts[domain] += 1
         
-        # 1. Modül: Yayılma (Retrieval Aşaması)
-        kg_summary = spreading_activation(question, seed_entity, max_rounds=3)
-        norm_gold = normalize_turkish_text(gold_answer)
+        print(f"\n[{idx}/{total_questions}] Domain: {domain} | Q: {question}")
         
-        # --- METRİK 4: Retrieval Recall Kontrolü ---
-        if kg_summary != "No relevant graph paths could be traversed.":
-            norm_summary = normalize_turkish_text(kg_summary)
-            if norm_gold in norm_summary:
-                retrieval_success_count += 1
-                retrieval_status = "SUCCESS"
-            else:
-                retrieval_status = "FAIL (Answer not in subgraph)"
-        else:
-            retrieval_status = "FAIL (No path found)"
-
-        # 2 ve 3. Modül: Genişletme ve Cevaplama
+        ans_m1 = run_no_retrieval(question)
+        eval_m1 = evaluate_single_method(gold_answer, ans_m1)
+        
+        ans_m2, ctx_m2 = run_vanilla_rag(question)
+        eval_m2 = evaluate_single_method(gold_answer, ans_m2, ctx_m2)
+        
+        ans_m3, ctx_m3, _ = run_vanilla_qe(question)
+        eval_m3 = evaluate_single_method(gold_answer, ans_m3, ctx_m3)
+        
+        kg_summary = spreading_activation(question, seed_entity, max_rounds=2)
         if "No relevant graph paths" in kg_summary:
-            final_answer = "FAILED_TO_FIND_PATH"
+            ans_m4 = "FAILED_TO_FIND_PATH"
         else:
             expanded_query = expand_query_with_kg(question, kg_summary)
-            final_answer = generate_final_answer(expanded_query).lower().strip()
-            
-        norm_ai = normalize_turkish_text(final_answer)
+            ans_m4 = generate_final_answer(expanded_query)
+        eval_m4 = evaluate_single_method(gold_answer, ans_m4, kg_summary)
         
-        print(f"Gold Answer: {gold_answer}")
-        print(f"AI Answer:   {final_answer}")
-        print(f"Retrieval:   {retrieval_status}")
+        # Metrikleri Domain Havuzuna Ekleme
+        for m_name, eval_data in zip(methods, [eval_m1, eval_m2, eval_m3, eval_m4]):
+            if eval_data["acc"]: domain_metrics[domain][m_name]["acc"] += 1
+            if eval_data["em"]: domain_metrics[domain][m_name]["em"] += 1
+            domain_metrics[domain][m_name]["f1"] += eval_data["f1"]
+            if eval_data["recall"]: domain_metrics[domain][m_name]["recall"] += 1
 
-        # --- METRİK 1: Accuracy (Yumuşak Eşleştirme) ---
-        is_acc = False
-        if norm_gold in norm_ai or norm_ai in norm_gold:
-            is_acc = True
-            acc_count += 1
-            
-        # --- METRİK 2: Exact Match (Birebir Eşleştirme) ---
-        is_em = False
-        if norm_gold == norm_ai:
-            is_em = True
-            em_count += 1
-            
-        # --- METRİK 3: F1 Score ---
-        f1_score = compute_f1(norm_gold, norm_ai)
-        f1_sum += f1_score
-            
-        # Loglama
         results_log.append({
-            "question_id": q_id,
-            "gold_answer": gold_answer,
-            "ai_answer": final_answer,
-            "metrics": {
-                "accuracy": is_acc,
-                "exact_match": is_em,
-                "f1_score": round(f1_score, 4),
-                "retrieval_success": retrieval_status == "SUCCESS"
+            "question_id": q_id, "domain": domain, "gold_answer": gold_answer,
+            "methods": {
+                "No-Retrieval": {"answer": ans_m1, "metrics": eval_m1},
+                "Vanilla RAG": {"answer": ans_m2, "metrics": eval_m2},
+                "Vanilla QE": {"answer": ans_m3, "metrics": eval_m3},
+                "KG-Infused RAG": {"answer": ans_m4, "metrics": eval_m4}
             }
         })
 
-    # Ortalamaları Hesapla
-    accuracy_perc = (acc_count / total_questions) * 100
-    em_perc = (em_count / total_questions) * 100
-    f1_avg_perc = (f1_sum / total_questions) * 100
-    retrieval_recall_perc = (retrieval_success_count / total_questions) * 100
-
-    print("\n" + "="*50)
-    print("FINAL EVALUATION RESULTS (ACADEMIC)")
-    print("="*50)
-    print(f"Total Questions:    {total_questions}")
-    print(f"1. Accuracy:        {accuracy_perc:.2f}% ({acc_count}/{total_questions})")
-    print(f"2. Exact Match (EM):{em_perc:.2f}% ({em_count}/{total_questions})")
-    print(f"3. F1 Score:        {f1_avg_perc:.2f}%")
-    print(f"4. Retrieval Recall:{retrieval_recall_perc:.2f}% ({retrieval_success_count}/{total_questions})")
-    print("="*50)
+    # === SONUÇLARI TERMİNALE YAZDIRMA (DOMAIN BAZLI) ===
+    print("\n" + "="*80)
+    print("FINAL RESULTS BY DOMAIN")
+    print("="*80)
     
-    # Raporu Kaydet
-    with open('evaluation_results.json', 'w', encoding='utf-8') as f:
-        json.dump({
-            "overall_metrics": {
-                "accuracy_percent": round(accuracy_perc, 2),
-                "exact_match_percent": round(em_perc, 2),
-                "f1_score_percent": round(f1_avg_perc, 2),
-                "retrieval_recall_percent": round(retrieval_recall_perc, 2),
-                "total_questions": total_questions
-            },
-            "details": results_log
-        }, f, ensure_ascii=False, indent=4)
+    final_report = {}
+    
+    for domain, m_dict in domain_metrics.items():
+        q_count = domain_counts[domain]
+        print(f"\n>>> DOMAIN: {domain.upper()} ({q_count} Questions) <<<")
+        print(f"{'Method':<15} | {'Acc (%)':<10} | {'EM (%)':<10} | {'F1 (%)':<10} | {'Recall (%)':<10}")
+        print("-" * 75)
         
-    print("\nDetailed results saved to 'evaluation_results.json'")
+        final_report[domain] = {}
+        for m_name, scores in m_dict.items():
+            acc = round((scores["acc"] / q_count) * 100, 2)
+            em = round((scores["em"] / q_count) * 100, 2)
+            f1 = round((scores["f1"] / q_count) * 100, 2)
+            rec = round((scores["recall"] / q_count) * 100, 2)
+            
+            final_report[domain][m_name] = {"Accuracy": acc, "Exact Match": em, "F1 Score": f1, "Retrieval Recall": rec}
+            print(f"{m_name:<15} | {acc:<10} | {em:<10} | {f1:<10} | {rec:<10}")
+            
+    with open('results_evaluation.json', 'w', encoding='utf-8') as f:
+        json.dump({"total_questions": total_questions, "domain_comparisons": final_report, "details": results_log}, f, ensure_ascii=False, indent=4)
+        
+    print("\nDetailed domain comparison saved to 'results_evaluation.json'")
 
 if __name__ == "__main__":
-    run_evaluation("turkey_qa_dataset.json")
+    run_master_evaluation("turkey_qa_dataset.json")
