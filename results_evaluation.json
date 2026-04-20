@@ -1,0 +1,2115 @@
+{
+    "total_questions": 46,
+    "domain_comparisons": {
+        "Turkish Football": {
+            "NoR": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 0.0,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_RAG": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 0.0,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_QE": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 7.5,
+                "Retrieval Recall": 0.0
+            },
+            "KG_RAG": {
+                "Accuracy": 50.0,
+                "Exact Match": 30.0,
+                "F1 Score": 33.33,
+                "Retrieval Recall": 60.0
+            }
+        },
+        "Turkish Cinema": {
+            "NoR": {
+                "Accuracy": 11.11,
+                "Exact Match": 0.0,
+                "F1 Score": 8.89,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_RAG": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 10.0,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_QE": {
+                "Accuracy": 11.11,
+                "Exact Match": 11.11,
+                "F1 Score": 21.11,
+                "Retrieval Recall": 11.11
+            },
+            "KG_RAG": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 13.7,
+                "Retrieval Recall": 11.11
+            }
+        },
+        "Turkish Companies": {
+            "NoR": {
+                "Accuracy": 11.11,
+                "Exact Match": 0.0,
+                "F1 Score": 7.41,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_RAG": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 0.0,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_QE": {
+                "Accuracy": 11.11,
+                "Exact Match": 0.0,
+                "F1 Score": 7.41,
+                "Retrieval Recall": 11.11
+            },
+            "KG_RAG": {
+                "Accuracy": 11.11,
+                "Exact Match": 11.11,
+                "F1 Score": 11.11,
+                "Retrieval Recall": 33.33
+            }
+        },
+        "Turkish Music": {
+            "NoR": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 5.56,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_RAG": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 5.56,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_QE": {
+                "Accuracy": 0.0,
+                "Exact Match": 0.0,
+                "F1 Score": 7.78,
+                "Retrieval Recall": 0.0
+            },
+            "KG_RAG": {
+                "Accuracy": 11.11,
+                "Exact Match": 11.11,
+                "F1 Score": 21.69,
+                "Retrieval Recall": 44.44
+            }
+        },
+        "Turkish Academia": {
+            "NoR": {
+                "Accuracy": 11.11,
+                "Exact Match": 0.0,
+                "F1 Score": 7.41,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_RAG": {
+                "Accuracy": 11.11,
+                "Exact Match": 0.0,
+                "F1 Score": 7.41,
+                "Retrieval Recall": 0.0
+            },
+            "Vanilla_QE": {
+                "Accuracy": 11.11,
+                "Exact Match": 0.0,
+                "F1 Score": 7.41,
+                "Retrieval Recall": 0.0
+            },
+            "KG_RAG": {
+                "Accuracy": 11.11,
+                "Exact Match": 11.11,
+                "F1 Score": 11.11,
+                "Retrieval Recall": 44.44
+            }
+        }
+    },
+    "details": [
+        {
+            "question_id": "TR_001",
+            "domain": "Turkish Football",
+            "gold_answer": "Bank Asya 1.League",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkish Super League",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkish Super Lig",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Süper Lig",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Bank Asya 1.League",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_002",
+            "domain": "Turkish Football",
+            "gold_answer": "Samsun 19 Mayis Stadyumu",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Kronos Arena",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Unknown",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Samsun 19 Mayıs Stadium",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.75,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Samsun 19 Mayis Stadyumu",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_003",
+            "domain": "Turkish Football",
+            "gold_answer": "futebol",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Football",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Not mentioned in context.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Football",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Futebol",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_004",
+            "domain": "Turkish Football",
+            "gold_answer": "samsun, turkey",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Ankara",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Ankara",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Samsun",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_005",
+            "domain": "Turkish Football",
+            "gold_answer": "turkiye",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_006",
+            "domain": "Turkish Football",
+            "gold_answer": "Bank Asya 1.League",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Gaziantep BK",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Super Lig",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Turkish Super Lig",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Gaziantep Bundesliga 1.League",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.3333333333333333,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_007",
+            "domain": "Turkish Football",
+            "gold_answer": ".TR",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkey.arpa",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkey. tr",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Turkey.arpa",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Turkey (.tr)",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_008",
+            "domain": "Turkish Football",
+            "gold_answer": "Afghanestan",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Germany",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Türkiye",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_009",
+            "domain": "Turkish Football",
+            "gold_answer": "African Union/United Nations Hybrid operation in Darfur",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Player",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "No direct link.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_010",
+            "domain": "Turkish Football",
+            "gold_answer": "Samsunspor",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkish football",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Same name?",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Same names.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "No connection provided.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_011",
+            "domain": "Turkish Cinema",
+            "gold_answer": "National Artist",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "State Prize",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "State Artist Title",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.4,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "State Artist Title",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.4,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "State Artist Honor",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.4,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_012",
+            "domain": "Turkish Cinema",
+            "gold_answer": "People's artist",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Tarkan",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Not provided.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Tevfik Aksoy",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_013",
+            "domain": "Turkish Cinema",
+            "gold_answer": "Titles of Honour",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "State Artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "State Artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Not mentioned.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "State Artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_014",
+            "domain": "Turkish Cinema",
+            "gold_answer": "turkiye",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_015",
+            "domain": "Turkish Cinema",
+            "gold_answer": "National Artist",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Living National Artist",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.8,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "State artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "National Artist",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "People's Artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_016",
+            "domain": "Turkish Cinema",
+            "gold_answer": "People's artist",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkish Republic",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Unknown",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "State Artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "For his contributions to Turkish cinema.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_017",
+            "domain": "Turkish Cinema",
+            "gold_answer": "National Artist",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Carlos Concepcion",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Error information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Error Retrieving",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "No relevant info.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_018",
+            "domain": "Turkish Cinema",
+            "gold_answer": "Titles of Honour",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "State Painter",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Not mentioned.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "State Artist",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Friend of Art",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.3333333333333333,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_019",
+            "domain": "Turkish Cinema",
+            "gold_answer": "state artist",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkish",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Not provided",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Tevfik Akbaş",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_020",
+            "domain": "Turkish Companies",
+            "gold_answer": "Bolu province",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Anatolia",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Cannot determine.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Not enough information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Claudiopolis area.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_021",
+            "domain": "Turkish Companies",
+            "gold_answer": "UTC+3:00",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Istanbul, EET",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Istanbul, UTC+2",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Error",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Bishopas, not directly provided",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_022",
+            "domain": "Turkish Companies",
+            "gold_answer": "city (kentucky)",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Lexington",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "No such entity.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_023",
+            "domain": "Turkish Companies",
+            "gold_answer": "ilçe",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Kütahya",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Unknown",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Boluprovince",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_024",
+            "domain": "Turkish Companies",
+            "gold_answer": "turkiye",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_025",
+            "domain": "Turkish Companies",
+            "gold_answer": "balikesir",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Balıkesir City",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.6666666666666666,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Balıkesir City",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.6666666666666666,
+                        "recall": true
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Balıkesir",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_026",
+            "domain": "Turkish Companies",
+            "gold_answer": "Communities",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Not applicable.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Not applicable.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Not applicable.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Administrative/ecclesiastical position",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_027",
+            "domain": "Turkish Companies",
+            "gold_answer": "Political division",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Frankfort",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Frankfort",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Lexington",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Clarify query.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_028",
+            "domain": "Turkish Companies",
+            "gold_answer": "Political region",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Kentucky Senate District 26",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Not specified",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No data available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "No relevant info.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_029",
+            "domain": "Turkish Music",
+            "gold_answer": "Carl Leverkus",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Lewikens",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Information not provided.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No relevant information in context.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Carl Leverkus",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_030",
+            "domain": "Turkish Music",
+            "gold_answer": "Germanz",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Türkei",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Türkei",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Türkei",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Germany",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_031",
+            "domain": "Turkish Music",
+            "gold_answer": "Governmental district Cologne",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "North Rhine-Westphalia",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "None",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Cologne is in the Regierungsbezirk of Cologne.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.2,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Cologne is not in a district; it's a city.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.16666666666666666,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_032",
+            "domain": "Turkish Music",
+            "gold_answer": "UTC2",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "CET/CEST",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "CET",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "CET/CEST",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "UTC+01:00",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_033",
+            "domain": "Turkish Music",
+            "gold_answer": "augusta ubiorum",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Colonia Agrippina",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Cannot determine.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Rhine River",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Leverkusen",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_034",
+            "domain": "Turkish Music",
+            "gold_answer": "communes of germany",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Neu Pankow",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No info.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No information provided.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "No additional communes mentioned.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.28571428571428575,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_035",
+            "domain": "Turkish Music",
+            "gold_answer": "Charles IX of Sweden",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Magnus Eriksson",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Information not available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Information not available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Unknown based on context.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_036",
+            "domain": "Turkish Music",
+            "gold_answer": "Finnish syntax",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Eesti keel",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Eesti keel",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Eesti keel",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Etelän kiotoni",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_037",
+            "domain": "Turkish Music",
+            "gold_answer": "High sea",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Baltic Sea",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Baltic Sea",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Baltic Sea",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Baltic Sea",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.5,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_038",
+            "domain": "Turkish Academia",
+            "gold_answer": "Public college",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Ohio State University",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No info.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No information available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Darülfünun educated him.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_039",
+            "domain": "Turkish Academia",
+            "gold_answer": "istanbul (turkey)",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.6666666666666666,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.6666666666666666,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": true,
+                        "em": false,
+                        "f1": 0.6666666666666666,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Istanbul, Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_040",
+            "domain": "Turkish Academia",
+            "gold_answer": "sultan mehmet al-fatih",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Alp Arslan",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Information not available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Sultan Mehmet al-Fatih",
+                    "metrics": {
+                        "acc": true,
+                        "em": true,
+                        "f1": 1.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_041",
+            "domain": "Turkish Academia",
+            "gold_answer": "turcophone",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Arabic",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No info.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Turkic languages",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_042",
+            "domain": "Turkish Academia",
+            "gold_answer": "turkiye",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Turkey",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": true
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_043",
+            "domain": "Turkish Academia",
+            "gold_answer": "Public college",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Boğaziçi University",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "No information available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "No information available.",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Not specified",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_044",
+            "domain": "Turkish Academia",
+            "gold_answer": "Vniversity",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "University",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Public university",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Public college",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Public college",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_045",
+            "domain": "Turkish Academia",
+            "gold_answer": "Archbishopric of Adrianopolis",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Edirne",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Edirne",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        },
+        {
+            "question_id": "TR_046",
+            "domain": "Turkish Academia",
+            "gold_answer": "Gebze",
+            "methods": {
+                "No-Retrieval": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla RAG": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "Vanilla QE": {
+                    "answer": "Istanbul",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                },
+                "KG-Infused RAG": {
+                    "answer": "Edirne",
+                    "metrics": {
+                        "acc": false,
+                        "em": false,
+                        "f1": 0.0,
+                        "recall": false
+                    }
+                }
+            }
+        }
+    ]
+}
