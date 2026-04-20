@@ -1,0 +1,675 @@
+[
+    {
+        "question_id": "TR_001",
+        "question_text": "Which league does Erkan Öztürk play in, given his membership with Samsunspor?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "league",
+            "Bank Asya 1.League"
+        ],
+        "gold_answer": "Bank Asya 1.League",
+        "difficulty": "2-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_002",
+        "question_text": "What is the home stadium of Erkan Öztürk's former sports team Samsunspor?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "home venue",
+            "Samsun 19 Mayis Stadyumu"
+        ],
+        "gold_answer": "Samsun 19 Mayis Stadyumu",
+        "difficulty": "2-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_003",
+        "question_text": "Which sport is Erkan Öztürk a member of while playing for Samsunspor?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "sport",
+            "futebol"
+        ],
+        "gold_answer": "futebol",
+        "difficulty": "2-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_004",
+        "question_text": "Which city in Turkey is the headquarters of the sports team that Erkan Öztürk was a member of?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "headquarters location",
+            "samsun, turkey"
+        ],
+        "gold_answer": "samsun, turkey",
+        "difficulty": "2-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_005",
+        "question_text": "Which country is Erkan Öztürk associated with through Samsunspor?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "country",
+            "turkiye"
+        ],
+        "gold_answer": "turkiye",
+        "difficulty": "2-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_006",
+        "question_text": "Which league does Erkan Öztürk play for, given that he is a member of Gaziantep Büyükşehir Belediyespor Kulübü?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Gaziantep Büyükşehir Belediyespor Kulübü",
+            "league",
+            "Bank Asya 1.League"
+        ],
+        "gold_answer": "Bank Asya 1.League",
+        "difficulty": "2-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_007",
+        "question_text": "Which country does Erkan Öztürk, a member of Samsunspor, come from, and what is its top-level Internet domain?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "country",
+            "turkiye",
+            "top-level Internet domain",
+            ".TR"
+        ],
+        "gold_answer": ".TR",
+        "difficulty": "3-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_008",
+        "question_text": "Which country has a diplomatic relation with Turkey through Erkan Öztürk, who is a member of Samsunspor?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "country",
+            "turkiye",
+            "diplomatic relation",
+            "Afghanestan"
+        ],
+        "gold_answer": "Afghanestan",
+        "difficulty": "3-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_009",
+        "question_text": "What was Erkan Öztürk's role with Samsunspor that led him to be a member of the African Union/United Nations Hybrid operation in Darfur?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor",
+            "country",
+            "turkiye",
+            "member of",
+            "African Union/United Nations Hybrid operation in Darfur"
+        ],
+        "gold_answer": "African Union/United Nations Hybrid operation in Darfur",
+        "difficulty": "3-hop",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_010",
+        "question_text": "What connects Yücel Uyar and Erkan Öztürk?",
+        "reasoning_path": [
+            "yücel uyar",
+            "Erkan Öztürk",
+            "member of sports team",
+            "Samsunspor"
+        ],
+        "gold_answer": "Samsunspor",
+        "difficulty": "comparison",
+        "domain": "Turkish Football"
+    },
+    {
+        "question_id": "TR_011",
+        "question_text": "What is the equivalent term for the state artist award received by Levent Kirca?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "National Artist"
+        ],
+        "gold_answer": "National Artist",
+        "difficulty": "2-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_012",
+        "question_text": "Who is considered the People's artist in Turkey, equivalent to Levent Kirca who was honored with the state artist award?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "People's artist"
+        ],
+        "gold_answer": "People's artist",
+        "difficulty": "2-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_013",
+        "question_text": "What title did Levent Kirca receive for being honored as a state artist?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "instance of",
+            "Titles of Honour"
+        ],
+        "gold_answer": "Titles of Honour",
+        "difficulty": "2-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_014",
+        "question_text": "In which country is Levent Kirca recognized as a state artist?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "country",
+            "turkiye"
+        ],
+        "gold_answer": "turkiye",
+        "difficulty": "2-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_015",
+        "question_text": "Who is considered equivalent to a National Artist through the award of state artist status, mentioned in relation to Kamil Sonmez?",
+        "reasoning_path": [
+            "Kamil Sonmez",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "National Artist"
+        ],
+        "gold_answer": "National Artist",
+        "difficulty": "2-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_016",
+        "question_text": "Who did Kamil Sonmez receive an award for, which is also known as People's Artist?",
+        "reasoning_path": [
+            "Kamil Sonmez",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "People's artist"
+        ],
+        "gold_answer": "People's artist",
+        "difficulty": "2-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_017",
+        "question_text": "Who is considered the National Artist in this path?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "People's artist",
+            "said to be the same as",
+            "National Artist"
+        ],
+        "gold_answer": "National Artist",
+        "difficulty": "3-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_018",
+        "question_text": "What title is given to a state artist in Turkey that is considered equivalent to People's Artist and falls under the category of Titles of Honour?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "People's artist",
+            "instance of",
+            "Titles of Honour"
+        ],
+        "gold_answer": "Titles of Honour",
+        "difficulty": "3-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_019",
+        "question_text": "Which state artist is considered equivalent to Levent Kirca, who has been awarded the title of People's artist?",
+        "reasoning_path": [
+            "Levent Kirca",
+            "award received",
+            "state artist",
+            "said to be the same as",
+            "People's artist",
+            "said to be the same as",
+            "state artist"
+        ],
+        "gold_answer": "state artist",
+        "difficulty": "3-hop",
+        "domain": "Turkish Cinema"
+    },
+    {
+        "question_id": "TR_020",
+        "question_text": "In which province is Boluspor's headquarters located, given that it is associated with the bishop of Claudiopolis?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "located in the administrative territorial entity",
+            "Bolu province"
+        ],
+        "gold_answer": "Bolu province",
+        "difficulty": "2-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_021",
+        "question_text": "In which city is the headquarters of Boluspor located, and what is the time zone of that city?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "located in time zone",
+            "UTC+3:00"
+        ],
+        "gold_answer": "UTC+3:00",
+        "difficulty": "2-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_022",
+        "question_text": "What city in Kentucky is the headquarters located in, for the entity known as the Bishop of Claudiolpolis?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "instance of",
+            "city (kentucky)"
+        ],
+        "gold_answer": "city (kentucky)",
+        "difficulty": "2-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_023",
+        "question_text": "What is the name of the ilçe where Boluspor's headquarters, historically associated with the Bishop of Claudiopolis, is located?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "instance of",
+            "ilçe"
+        ],
+        "gold_answer": "ilçe",
+        "difficulty": "2-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_024",
+        "question_text": "In which country is the headquarters of Boluspor located, also known as bishop of claudiopolis?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "country",
+            "turkiye"
+        ],
+        "gold_answer": "turkiye",
+        "difficulty": "2-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_025",
+        "question_text": "What is the capital of Balikesir University's headquarters location?",
+        "reasoning_path": [
+            "balıkesir university",
+            "headquarters location",
+            "Balikesir Ili",
+            "capital",
+            "balikesir"
+        ],
+        "gold_answer": "balikesir",
+        "difficulty": "2-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_026",
+        "question_text": "What type of place is Bishop of Claudiopolis, which is an instance of a city in Kentucky?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "instance of",
+            "city (kentucky)",
+            "subclass of",
+            "Communities"
+        ],
+        "gold_answer": "Communities",
+        "difficulty": "3-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_027",
+        "question_text": "What city in Kentucky serves as a political division?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "instance of",
+            "city (kentucky)",
+            "subclass of",
+            "Political division"
+        ],
+        "gold_answer": "Political division",
+        "difficulty": "3-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_028",
+        "question_text": "What political region does the city of Bishop of Claudiopolis, Kentucky belong to?",
+        "reasoning_path": [
+            "Boluspor",
+            "headquarters location",
+            "bishop of claudiopolis",
+            "instance of",
+            "city (kentucky)",
+            "subclass of",
+            "Political region"
+        ],
+        "gold_answer": "Political region",
+        "difficulty": "3-hop",
+        "domain": "Turkish Companies"
+    },
+    {
+        "question_id": "TR_029",
+        "question_text": "Who is the person that the city of Leverkusen is named after?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "named after",
+            "Carl Leverkus"
+        ],
+        "gold_answer": "Carl Leverkus",
+        "difficulty": "2-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_030",
+        "question_text": "In welchem Land wurde Erkan Öztürk geboren?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "country",
+            "Germanz"
+        ],
+        "gold_answer": "Germanz",
+        "difficulty": "2-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_031",
+        "question_text": "In which governmental district is Cologne located?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "located in the administrative territorial entity",
+            "Governmental district Cologne"
+        ],
+        "gold_answer": "Governmental district Cologne",
+        "difficulty": "2-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_032",
+        "question_text": "In which UTC time zone is Erkan Öztürk's place of birth, Leverkusen, located?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "located in time zone",
+            "UTC2"
+        ],
+        "gold_answer": "UTC2",
+        "difficulty": "2-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_033",
+        "question_text": "Which ancient place shares a border with Augusta Ubiorum?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "shares border with",
+            "augusta ubiorum"
+        ],
+        "gold_answer": "augusta ubiorum",
+        "difficulty": "2-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_034",
+        "question_text": "What are some communes in Germany where Erkan Öztürk was born?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "instance of",
+            "communes of germany"
+        ],
+        "gold_answer": "communes of germany",
+        "difficulty": "2-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_035",
+        "question_text": "Who founded Uleåborg?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "twinned administrative body",
+            "uleåborg",
+            "founded by",
+            "Charles IX of Sweden"
+        ],
+        "gold_answer": "Charles IX of Sweden",
+        "difficulty": "3-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_036",
+        "question_text": "Mikä on uleaborgin virallinen kieli suon muodossa?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "twinned administrative body",
+            "uleåborg",
+            "official language",
+            "Finnish syntax"
+        ],
+        "gold_answer": "Finnish syntax",
+        "difficulty": "3-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_037",
+        "question_text": "Which body of water borders Umeå, sharing its twinned administrative relationship through Leverkusen and Erkan Öztürk's place of birth?",
+        "reasoning_path": [
+            "Erkan Öztürk",
+            "place of birth",
+            "Leverkusen",
+            "twinned administrative body",
+            "uleåborg",
+            "shares border with",
+            "High sea"
+        ],
+        "gold_answer": "High sea",
+        "difficulty": "3-hop",
+        "domain": "Turkish Music"
+    },
+    {
+        "question_id": "TR_038",
+        "question_text": "What public college did Ertugrul Guenay educate at?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "instance of",
+            "Public college"
+        ],
+        "gold_answer": "Public college",
+        "difficulty": "2-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_039",
+        "question_text": "In which city is Daruelfuenun located, where Ertugrul Guenay was educated?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "located in the administrative territorial entity",
+            "istanbul (turkey)"
+        ],
+        "gold_answer": "istanbul (turkey)",
+        "difficulty": "2-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_040",
+        "question_text": "Who founded Daruelfuenun, the institution where Ertugrul Günenay was educated?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "founded by",
+            "sultan mehmet al-fatih"
+        ],
+        "gold_answer": "sultan mehmet al-fatih",
+        "difficulty": "2-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_041",
+        "question_text": "What language was taught at Daruelfuenun, the school Ertugrul Guenay studied at?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "language used",
+            "turcophone"
+        ],
+        "gold_answer": "turcophone",
+        "difficulty": "2-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_042",
+        "question_text": "In which country was Ertugrul Günay educated at Daruelfuenun?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "country",
+            "turkiye"
+        ],
+        "gold_answer": "turkiye",
+        "difficulty": "2-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_043",
+        "question_text": "What public college did Haldun Alagas educate at as part of the Erasmus/Socrates partnership with Marmara University?",
+        "reasoning_path": [
+            "Haldun Alagas",
+            "educated at",
+            "erasmus/socrates partners of marmara university",
+            "instance of",
+            "Public college"
+        ],
+        "gold_answer": "Public college",
+        "difficulty": "2-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_044",
+        "question_text": "What type of institution is Daruelfuenun, which Ertugrul Guenay was educated at and is a public college subclass of?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "instance of",
+            "Public college",
+            "subclass of",
+            "Vniversity"
+        ],
+        "gold_answer": "Vniversity",
+        "difficulty": "3-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_045",
+        "question_text": "Where was Sultan Mehmet the Conqueror born?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "founded by",
+            "sultan mehmet al-fatih",
+            "place of birth",
+            "Archbishopric of Adrianopolis"
+        ],
+        "gold_answer": "Archbishopric of Adrianopolis",
+        "difficulty": "3-hop",
+        "domain": "Turkish Academia"
+    },
+    {
+        "question_id": "TR_046",
+        "question_text": "In which place did Sultan Mehmet al-Fatih die, where Daruelfuenun was founded and Ertugrul Guenay educated?",
+        "reasoning_path": [
+            "Ertugrul Guenay",
+            "educated at",
+            "Daruelfuenun",
+            "founded by",
+            "sultan mehmet al-fatih",
+            "place of death",
+            "Gebze"
+        ],
+        "gold_answer": "Gebze",
+        "difficulty": "3-hop",
+        "domain": "Turkish Academia"
+    }
+]
